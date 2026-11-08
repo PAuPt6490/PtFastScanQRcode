@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 深色模式:同名主题换成 Material 深色父类,设置界面与系统夜灯一起翻。 -->
+    <style name="Theme.PtScan" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:windowBackground">?attr/colorSurface</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:colorAccent">#FF1A73E8</item>
+        <item name="android:colorPrimary">#FF1A73E8</item>
+    </style>
+</resources>

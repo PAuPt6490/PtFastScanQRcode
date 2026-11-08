@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PtFastScanQRcode</string>
+    <string name="hint_scan">把二维码/条码放进框内</string>
+    <string name="status_ready">正在识别…</string>
+    <string name="btn_torch">手电筒</string>
+    <string name="btn_camera">相机</string>
+    <string name="btn_gallery">相册</string>
+    <string name="btn_history">历史</string>
+    <string name="btn_settings">设置</string>
+    <string name="btn_copy">复制</string>
+    <string name="btn_open">打开</string>
+    <string name="btn_share">分享</string>
+    <string name="btn_clear">清空</string>
+    <string name="result_hint">扫描结果会显示在这里，也可以直接编辑</string>
+
+    <string name="settings_title">设置</string>
+    <string name="sec_appearance">外观</string>
+    <string name="sec_ui">界面</string>
+    <string name="sec_launch">快捷启动</string>
+
+    <string name="label_dark_mode">深浅模式</string>
+    <string name="mode_system">跟随系统</string>
+    <string name="mode_light">浅色</string>
+    <string name="mode_dark">深色</string>
+
+    <string name="label_accent">主题色</string>
+    <string name="accent_system">系统主题色</string>
+
+    <string name="label_show_camera">顶部显示「相机」</string>
+    <string name="label_show_torch">顶部显示「手电筒」</string>
+    <string name="label_show_gallery">顶部显示「相册」</string>
+    <string name="label_show_history">顶部显示「历史」</string>
+    <string name="label_vibrate">扫到结果时振动</string>
+    <string name="label_decode_fps">解码帧率</string>
+    <string name="unit_fps">帧/秒 (1-60)</string>
+
+    <string name="launch_shortcut">桌面快捷方式</string>
+    <string name="launch_shortcut_desc">长按桌面上的应用图标，菜单里会有「扫一扫」。</string>
+    <string name="launch_tile">快捷设置磁贴</string>
+    <string name="launch_tile_desc">把「扫一扫」放进下拉快捷开关，任何界面都能一键打开。</string>
+    <string name="launch_tile_add">添加到快捷设置</string>
+    <string name="launch_tile_manual">下拉通知栏点编辑，把「扫一扫」拖进快捷开关</string>
+    <string name="launch_tile_added">已添加到快捷设置</string>
+    <string name="launch_tile_unsupported">当前系统不支持自动添加，请手动添加</string>
+    <string name="launch_volume">音量键双击</string>
+    <string name="launch_volume_desc">连按两下音量下键启动扫描。需要打开无障碍服务，默认关闭。</string>
+    <string name="launch_volume_enable">去打开无障碍服务</string>
+    <string name="launch_volume_disable">关闭无障碍服务</string>
+    <string name="shortcut_scan">扫一扫</string>
+    <string name="shortcut_scan_short">扫描二维码</string>
+    <string name="service_name">PtFastScanQRcode 快捷启动</string>
+    <string name="accessibility_desc">连按两下音量下键时启动二维码扫描界面。不会读取屏幕内容。</string>
+    <string name="version_label">PtFastScanQRcode 1.0</string>
+    <string name="custom_accent">色号</string>
+    <string name="apply">应用</string>
+    <string name="custom_accent_bad">输成 #RRGGBB 这样的六位色号</string>
+    <string name="custom_accent_hint">色号 #RRGGBB</string>
+    <string name="color_source">取色来源</string>
+    <string name="color_source_system">系统动态取色(Android 12+),跟随壁纸变化</string>
+    <string name="color_source_wallpaper">从系统壁纸取色(系统算好的壁纸主色)</string>
+    <string name="color_source_bitmap">从壁纸图片取色(本应用量化主色)</string>
+    <string name="color_source_none">本机壁纸取不到颜色(可能是动态壁纸),请用预设色或从图片取色</string>
+    <string name="pick_from_image">从图片取色</string>
+    <string name="pick_from_image_failed">这张图取不到明显的颜色</string>
+</resources>

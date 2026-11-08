@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 相机页:全屏、无标题栏、透明系统栏。深浅由 values-night 覆盖同名 Theme.PtScan 决定。 -->
+    <style name="Theme.PtScan" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">?attr/colorSurface</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:colorAccent">#FF1A73E8</item>
+        <item name="android:colorPrimary">#FF1A73E8</item>
+    </style>
+
+    <style name="Theme.PtScan.Light" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowBackground">?attr/colorSurface</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:colorAccent">#FF1A73E8</item>
+        <item name="android:colorPrimary">#FF1A73E8</item>
+    </style>
+
+    <style name="Theme.PtScan.Dark" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:windowBackground">?attr/colorSurface</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:colorAccent">#FF1A73E8</item>
+        <item name="android:colorPrimary">#FF1A73E8</item>
+    </style>
+
+    <!-- 强调色:只有颜色属性,parent 显式留空,否则 AAPT 会去找名为 Accent 的父样式。 -->
+    <style name="Accent.Blue" parent="">
+        <item name="android:colorAccent">#FF1A73E8</item>
+        <item name="android:colorPrimary">#FF1A73E8</item>
+        <item name="android:colorControlActivated">#FF1A73E8</item>
+    </style>
+
+    <style name="Accent.Green" parent="">
+        <item name="android:colorAccent">#FF1E8E3E</item>
+        <item name="android:colorPrimary">#FF1E8E3E</item>
+        <item name="android:colorControlActivated">#FF1E8E3E</item>
+    </style>
+
+    <style name="Accent.Purple" parent="">
+        <item name="android:colorAccent">#FF7B1FA2</item>
+        <item name="android:colorPrimary">#FF7B1FA2</item>
+        <item name="android:colorControlActivated">#FF7B1FA2</item>
+    </style>
+
+    <style name="Accent.Orange" parent="">
+        <item name="android:colorAccent">#FFE8710A</item>
+        <item name="android:colorPrimary">#FFE8710A</item>
+        <item name="android:colorControlActivated">#FFE8710A</item>
+    </style>
+
+    <style name="Accent.Red" parent="">
+        <item name="android:colorAccent">#FFD93025</item>
+        <item name="android:colorPrimary">#FFD93025</item>
+        <item name="android:colorControlActivated">#FFD93025</item>
+    </style>
+
+    <style name="Accent.Cyan" parent="">
+        <item name="android:colorAccent">#FF00838F</item>
+        <item name="android:colorPrimary">#FF00838F</item>
+        <item name="android:colorControlActivated">#FF00838F</item>
+    </style>
+
+    <!-- 老系统没有系统主题色,v31 里会覆盖成真正的 @android:color/system_accent1_500。 -->
+    <style name="Accent.System" parent="">
+        <item name="android:colorAccent">#FF1A73E8</item>
+        <item name="android:colorPrimary">#FF1A73E8</item>
+        <item name="android:colorControlActivated">#FF1A73E8</item>
+    </style>
+
+
+    <!-- 全部走 M3 的排版 token,不自定字号 -->
+    <style name="PtText.Section" parent="TextAppearance.Material3.TitleSmall" />
+    <style name="PtText.Title" parent="TextAppearance.Material3.BodyLarge" />
+    <style name="PtText.Summary" parent="TextAppearance.Material3.BodySmall" />
+    <style name="PtText.Label" parent="TextAppearance.Material3.BodyMedium" />
+</resources>

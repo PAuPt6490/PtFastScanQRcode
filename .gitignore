@@ -1,0 +1,17 @@
+# Gradle / build outputs
+.gradle/
+build/
+app/build/
+
+# Local SDK path (machine specific)
+local.properties
+
+# IDE
+.idea/
+*.iml
+captures/
+.DS_Store
+
+# Signing artefacts that are not the dev key
+dist/*.idsig
+docs/_raw-*.png
