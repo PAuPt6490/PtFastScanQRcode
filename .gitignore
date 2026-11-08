@@ -12,6 +12,11 @@ local.properties
 captures/
 .DS_Store
 
-# Signing artefacts that are not the dev key
+# Signing material never goes into the repo
+signing/
+app/signing/
+*.jks
+
+# Scratch files
 dist/*.idsig
 docs/_raw-*.png

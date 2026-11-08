@@ -2,6 +2,17 @@ plugins {
     id("com.android.application")
 }
 
+import java.util.Properties
+
+// 签名材料不进仓库:口令与 keystore 路径放在仓库根目录的 signing/keystore.properties(已 gitignore)。
+// 没有这个文件时(比如别人 clone 下来)release 包不签名,assembleRelease 仍能跑,用来验证能编过。
+val signingPropertiesFile = rootProject.file("signing/keystore.properties")
+val signingProperties = Properties()
+if (signingPropertiesFile.isFile) {
+    signingPropertiesFile.inputStream().use { signingProperties.load(it) }
+}
+val hasSigningMaterial = signingProperties.getProperty("storeFile") != null
+
 android {
     namespace = "com.ptfast.scanqr"
     compileSdk = 35
@@ -21,10 +32,14 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("signing/ptfastscan.jks")
-            storePassword = "ptfastscan"
-            keyAlias = "ptfastscan"
-            keyPassword = "ptfastscan"
+            if (hasSigningMaterial) {
+                // storeFile 相对 signing/keystore.properties 所在目录解析
+                val keystorePath = signingProperties.getProperty("storeFile")
+                storeFile = File(signingPropertiesFile.parentFile, keystorePath)
+                storePassword = signingProperties.getProperty("storePassword")
+                keyAlias = signingProperties.getProperty("keyAlias")
+                keyPassword = signingProperties.getProperty("keyPassword")
+            }
         }
     }
 
@@ -36,7 +51,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("release")
+            if (hasSigningMaterial) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
     }
 
